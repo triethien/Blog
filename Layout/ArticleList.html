@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usertlist</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.ico" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/Article.js"></script>
+   </head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="UserList.html">User</a></li>
+            <li><a href="ArticleList.html">Article</a></li>
+            <li><a href="CommentList.html">Comment </a></li>
+        </ul>
+    </nav>
+    <Section >
+        <article class="left">
+            <div class="row">
+                <div class="title" id="Title"></div>
+                <div style=" padding:2%;">
+                    <button onclick="window.location.href='ArticleAdd.html'">Add Article</button><br><br>
+                    <dialog id="show" style="display: none; z-index: 1">
+                        <form method="dialog">
+                          <p>
+                            <label for="fname">ID:</label>
+                            <input type="text" id="ID" name="fname" disabled style="float: right;margin-left: 10px;"><br><br>
+                              <label for="fname">Title:</label>
+                              <input type="text" id="Title" name="fname" style="float: right;margin-left: 10px; "><br><br>
+                              <label for="lname">Content</label>
+                              <input type="text" id="Content" name="lname" style="float: right;margin-left: 10px;"><br><br>
+                              <label for="fname">ViewCount:</label>
+                              <input type="text" id="ViewCount" name="fname" style="float: right;margin-left: 10px;"><br><br>
+                              <label for="lname">AuthorId:</label>
+                              <input type="text" id="AuthorId" name="lname" style="float: right;margin-left: 10px;"><br><br>
+                            </form>
+                          </p>
+                          <div >
+                            <button id="cancel" onclick=CloseEditUserConfirm()>Cancel</button>
+                            <button id="confirmBtn" style="float: right;" onclick=EditUserConfirm()>Confirm</button>
+                          </div>
+                        </form>
+                      </dialog>
+                    <table id="UserList" class="display" style="width:90% ;margin:auto">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>ViewCount</th>
+                                <th>AuthorId</th>
+                                <th style="width: 220px;">Button</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div><!-- /.row -->
+
+        </article>
+    </Section>
+    
+    <div>
+        <footer>
+            <p class="foot">HienTriet &copy; 2022</p>
+        </footer>
+    </div>
+</body>
+
+</html>
